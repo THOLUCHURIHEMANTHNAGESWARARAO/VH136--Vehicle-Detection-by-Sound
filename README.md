@@ -8,6 +8,10 @@ https://drive.google.com/drive/folders/1FN_0LilPeZZhCTN2j36ZGnqtTiMruxv5?usp=sha
 
 https://drive.google.com/file/d/1BANZviJyvjl6gZnlXaNwL-TqhGHbLT4l/view?usp=sharing
 
+##Input Data(mp3 audio files):
+
+https://drive.google.com/drive/folders/1EK5ioFNLuQ-Ia8rDvoad4nsItl6V3h2o?usp=sharing
+
 
 ## Team Details:
 
@@ -57,9 +61,9 @@ Pyhton, MachineLearning algorithms, Audio files(mp3).
 
 *Clone the project.
 
-*Take some horn sounds in MP3 format only.
+*Take some horn sounds in MP3 format only, I have already provided via drive link in above Take over there.
 
-*Upload the Audio files(mp3) into google colab or jupyter notebook.
+*Upload the Audio files(mp3) and code into google colab or jupyter notebook.
 
 *Train the model with Audio files.
 
