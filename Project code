@@ -10,6 +10,7 @@ def extract_files(file_path):
     audio_datas, sample_rate = librosa.load(file_path)
     mfccs = librosa.feature.mfcc(y=audio_datas, sr=sample_rate, n_mfcc=13)
     return np.mean(mfccs.T, axis=0)
+# download the audio files from any where you can but files will be in mp3 format only.
 audio_files = [
    "Bike-1.mp3",
    "Bike-2.mp3",
