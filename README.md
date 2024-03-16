@@ -1,4 +1,4 @@
-                                             # VH136--Vehicle-Sound-Detection-
+                                             # VH136--Vehicle-Horn-Detection-
 																						 
 Team Details:
 
