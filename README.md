@@ -13,7 +13,7 @@ Team no: VH136
 
 ## Problem Statement:
 
-   Python code implementation using Machine Learning Algorithms for detection of vehicle horn.
+   Python code implementation using Machine Learning Algorithms for detection of vehicle by horn.
    
 
 ## About the Project:
