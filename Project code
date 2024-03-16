@@ -22,9 +22,9 @@ audio_files = [
    "Car-3.mp3"
 ]
 
-label = ["bike","bike","bike","bus","bus","bus","car","car","car"]
+input_label = ["bike","bike","bike","bus","bus","bus","car","car","car"]
 x = np.array([extract_files(file) for file in audio_files])
-y = np.array(label)
+y = np.array(input_label)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
