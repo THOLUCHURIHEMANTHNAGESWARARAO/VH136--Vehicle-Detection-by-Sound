@@ -23,15 +23,15 @@ audio_files = [
 ]
 
 label = ["bike","bike","bike","bus","bus","bus","car","car","car"]
-X = np.array([extract_files(file) for file in audio_files])
+x = np.array([extract_files(file) for file in audio_files])
 y = np.array(label)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 Clf = RandomForestClassifier(n_estimators=100, random_state=42)
-Clf.fit(X_train, y_train)
+Clf.fit(x_train, y_train)
 
-y_prediction = Clf.predict(X_test)
+y_prediction = Clf.predict(x_test)
 Accuracy = accuracy_score(y_test, y_prediction)
 print("Accuracy:", Accuracy)
 
