@@ -1,0 +1,41 @@
+import librosa
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+
+
+
+def extract_files(file_path):
+    audio_datas, sample_rate = librosa.load(file_path)
+    mfccs = librosa.feature.mfcc(y=audio_datas, sr=sample_rate, n_mfcc=13)
+    return np.mean(mfccs.T, axis=0)
+audio_files = [
+   "Bike-1.mp3",
+   "Bike-2.mp3",
+   "Bike-3.mp3",
+   "Bus-1.mp3",
+   "Bus-2.mp3",
+   "Bus-3.mp3",
+   "Car-1.mp3",
+   "Car-2.mp3",
+   "Car-3.mp3"
+]
+
+label = ["bike","bike","bike","bus","bus","bus","car","car","car"]
+X = np.array([extract_files(file) for file in audio_files])
+y = np.array(label)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+Clf = RandomForestClassifier(n_estimators=100, random_state=42)
+Clf.fit(X_train, y_train)
+
+y_prediction = Clf.predict(X_test)
+Accuracy = accuracy_score(y_test, y_prediction)
+print("Accuracy:", Accuracy)
+
+sample1 = "Bus-3.mp3"
+new_feature = extract_files(sample1)
+predicted_label = Clf.predict([new_feature])[0]
+print("Predicted label for", sample1, ":", predicted_label)
